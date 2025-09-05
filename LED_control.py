@@ -3,8 +3,9 @@ from time import sleep
 
 led = LED(17)
 
-while True:
+for _ in range(10):
     led.on()
-    sleep(1)
+    print(f"LED blinked {_ + 1} times on {led.pin}")
+    sleep(0.5)
     led.off()
-    sleep(1)
+    sleep(0.5)
